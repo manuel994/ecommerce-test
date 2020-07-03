@@ -27,12 +27,14 @@
                               </v-alert>
 
                             <v-text-field
+                              name="username"
                               v-model="username"
                               label="Username or email"
                               required
                             ></v-text-field>
 
                             <v-text-field
+                              name="password"
                               v-model="password"
                               :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
                               :type="show1 ? 'text' : 'password'"
@@ -41,7 +43,7 @@
                                @click:append="show1 = !show1"
                             ></v-text-field>
 
-                            <v-btn color="primary" class="mr-4" @click="login">
+                            <v-btn name="login" color="primary" class="mr-4" @click="login">
                                 <v-icon>mdi-login</v-icon> Login
                             </v-btn>
                         </v-form>

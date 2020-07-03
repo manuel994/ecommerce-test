@@ -17,6 +17,7 @@
                     <v-card-text>
                         <v-form>
                             <v-text-field
+                              name="name"
                               v-model="name"
                               label="Name"
                               :error-messages="errors.name"
@@ -24,6 +25,7 @@
                             ></v-text-field>
 
                             <v-text-field
+                              name="email"
                               v-model="email"
                               label="Email"
                               :error-messages="errors.email"
@@ -31,6 +33,7 @@
                             ></v-text-field>
 
                             <v-text-field
+                              name="username"
                               v-model="username"
                               label="Username"
                               :error-messages="errors.username"
@@ -38,6 +41,7 @@
                             ></v-text-field>
 
                             <v-text-field
+                              name="password"
                               v-model="password"
                               :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
                               :type="show1 ? 'text' : 'password'"
@@ -48,6 +52,7 @@
                             ></v-text-field>
 
                             <v-text-field
+                              name="password_confirmation"
                               v-model="password_confirmation"
                               :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
                               :type="show1 ? 'text' : 'password'"
@@ -57,7 +62,7 @@
                                @click:append="show1 = !show1"
                             ></v-text-field>
 
-                            <v-btn color="primary" class="mr-4" @click="register">
+                            <v-btn name="register" color="primary" class="mr-4" @click="register">
                                 <v-icon left>mdi-account-edit</v-icon> Register me
                             </v-btn>
                         </v-form>
